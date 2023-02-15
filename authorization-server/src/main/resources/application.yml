@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:oauth2-database
+    password:
+    username:
+  liquibase:
+    change-log: classpath:config/liquibase/master.xml
+server:
+  port: 8081
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.springframework.security: TRACE
+    jakarta.activation: INFO

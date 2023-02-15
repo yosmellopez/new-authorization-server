@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!--
+        Added the entity OauthRegisteredClient.
+    -->
+    <changeSet id="20230117163902-1" author="jhipster">
+        <createTable tableName="oauth_registered_client" remarks="not an ignored comment">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="client_id" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_id_issued_at" type="${timestampzType}">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_secret" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_secret_expires_at" type="${timestampzType}">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_name" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_authentication_methods" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="authorization_grant_types" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="redirect_uris" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="scopes" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_settings" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="token_settings" type="varchar(2000)">
+                <constraints nullable="true"/>
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="oauth_registered_client" columnName="client_id_issued_at"
+                          columnDataType="${timestampzType}"/>
+        <dropDefaultValue tableName="oauth_registered_client" columnName="client_secret_expires_at"
+                          columnDataType="${timestampzType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+</databaseChangeLog>

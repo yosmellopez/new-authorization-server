@@ -4,8 +4,136 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c0a2bcb-c949-4802-af41-497371c84e0f" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="8c0a2bcb-c949-4802-af41-497371c84e0f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/authorization-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/AuthorizationServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/JacksonConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/LocaleConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/RestTemplateConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/domain/OAuthAuthorizationConsent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/domain/OAuthClientAuthorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/domain/OAuthRegisteredClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/repository/OAuthAuthorizationConsentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/repository/OAuthClientAuthorizationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/repository/OAuthRegisteredClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/AuthoritiesConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaOAuth2AuthorizationConsentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaOAuth2AuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaOAuth2ClientAuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaRegisteredClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/LoginAuthenticationFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/LoginAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/OAuth2ApplicationTokenCustomizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/OAuth2AuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/OAuth2SecurityAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/UserNotActivatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/util/OAuth2ConfigurerUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/util/OAuth2EndpointUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/20230117163900_added_entity_OauthAuthorizationConsent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/20230117163901_added_entity_OauthClientAuthorization.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/20230117163902_added_entity_OauthRegisteredClient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/data/authority.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/data/user.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/data/user_authority.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/test/java/org/ylplabs/authorizationserver/AuthorizationServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/UsersServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/FeignConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/JacksonConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/OAuth2Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/RestTemplateConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/oauth2/OAuth2Properties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/config/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/domain/OAuthAuthorizationConsent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/domain/OAuthClientAuthorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/domain/OAuthRegisteredClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/repository/OAuthAuthorizationConsentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/repository/OAuthClientAuthorizationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/repository/OAuthRegisteredClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/AuthoritiesConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/UserNotActivatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/client/AuthorizedFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/client/OAuth2InterceptedFeignConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/client/TokenRelayRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/client/UserFeignClientInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/AudienceValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/AuthorizationHeaderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/CookieCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/CookiesHttpServletRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/GrantTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/JpaOAuth2ClientAuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/JwtGrantedAuthorityConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2CookieHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2Cookies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2SecurityAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2TokenEndpointClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuth2TokenEndpointClientAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/OAuthIdpTokenResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/oauth2/UaaTokenEndpointClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/security/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/EmailAlreadyUsedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/InvalidPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/UsernameAlreadyUsedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/client/LoginFlowServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/client/OAuth2FeignConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/client/RefreshTokenServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/dto/OAuth2AccessToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/dto/OAuthCsrfToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/dto/SecurityOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/dto/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/types/DateType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/util/AESUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/util/HeaderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/BadRequestAlertException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ErrorConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ExceptionTranslator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/FieldErrorVM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/OauthErrorMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ProblemDetailWithCause.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/KeyAndPasswordVM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/LoginVM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/QRResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/TransferTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/ValidateCodeVM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/vm/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/changelog/20230117163900_added_entity_OauthAuthorizationConsent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/changelog/20230117163901_added_entity_OauthClientAuthorization.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/changelog/20230117163902_added_entity_OauthRegisteredClient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/data/authority.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/data/user.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/data/user_authority.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/test/java/org/ylplabs/usersservice/UsersServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +184,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "spring.configuration.checksum": "82d9ac5b0cd366fe351b26304c1084ca",
     "vue.rearranger.settings.migration": "true"
   },
@@ -116,7 +244,7 @@
       <updated>1676434929158</updated>
       <workItem from="1676434930265" duration="1198000" />
       <workItem from="1676471365541" duration="6507000" />
-      <workItem from="1676480031446" duration="81000" />
+      <workItem from="1676480031446" duration="361000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676479952187</created>
@@ -125,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676479952187</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1676480154038</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676480154038</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
