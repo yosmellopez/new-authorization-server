@@ -21,8 +21,5 @@
     <property name="timestampzType" value="timestamptz" dbms="postgresql"/>
 
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20230117163900_added_entity_OauthAuthorizationConsent.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20230117163901_added_entity_OauthClientAuthorization.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20230117163902_added_entity_OauthRegisteredClient.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

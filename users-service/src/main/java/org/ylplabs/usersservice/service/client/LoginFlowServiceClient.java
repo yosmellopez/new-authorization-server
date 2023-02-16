@@ -16,7 +16,7 @@ import java.util.Map;
 import static org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED_VALUE;
 
 @FeignClient(value = "login-client",
-        url = "http://localhost:9999",
+        url = "http://localhost:8081",
         path = "/v1/oauth2",
         configuration = OAuth2FeignConfiguration.class)
 public interface LoginFlowServiceClient {

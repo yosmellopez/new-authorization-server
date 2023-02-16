@@ -1,13 +1,20 @@
 spring:
   datasource:
-    password:
-    username:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:oauth2-database
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/oauth2-database
+    password: postgres
+    username: postgres
   liquibase:
     change-log: classpath:config/liquibase/master.xml
   main:
     allow-bean-definition-overriding: true
+  cloud:
+    openfeign:
+      client:
+        config:
+          login-client:
+            connect-timeout: 20000
+            read-timeout: 20000
   security:
     oauth2:
       client:
@@ -24,3 +31,11 @@ spring:
             token-uri: http://localhost:8081/v1/oauth2/token
             user-info-uri: http://localhost:8081/v1/oauth2/userinfo
             jwk-set-uri: http://localhost:8081/v1/oauth2/jwks
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.springframework.security: TRACE
+    jakarta.activation: INFO
+    org.ylplabs.usersservice: DEBUG
+

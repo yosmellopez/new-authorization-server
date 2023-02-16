@@ -1,4 +1,4 @@
-package org.ylplabs.usersservice.web.rest.errors;
+package org.ylplabs.authorizationserver.web.rest.errors;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
@@ -8,8 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageConversionException;
-import org.springframework.lang.NonNull;
-import org.springframework.lang.Nullable;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.ErrorResponse;
@@ -19,9 +17,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.NativeWebRequest;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import org.ylplabs.usersservice.service.util.HeaderUtil;
+import org.ylplabs.authorizationserver.security.util.HeaderUtil;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -42,6 +39,7 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     private static final String MESSAGE_KEY = "message";
     private static final String PATH_KEY = "path";
 
+    private final String applicationName = "oauth-server";
     private final Environment env;
 
     public ExceptionTranslator(Environment env) {
@@ -54,44 +52,33 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
         return handleExceptionInternal((Exception) ex, pdCause, buildHeaders(ex, request), HttpStatusCode.valueOf(pdCause.getStatus()), request);
     }
 
-    @Nullable
-    @Override
-    protected ResponseEntity<Object> handleExceptionInternal(@NonNull Exception ex, @Nullable Object body,
-                                                             @NonNull HttpHeaders headers, @NonNull HttpStatusCode statusCode,
-                                                             @NonNull WebRequest request) {
-        body = body == null ? wrapAndCustomizeProblem(ex, (NativeWebRequest) request) : body;
-        return super.handleExceptionInternal(ex, body, headers, statusCode, request);
-    }
 
     protected ProblemDetailWithCause wrapAndCustomizeProblem(Throwable ex, NativeWebRequest request) {
         return customizeProblem(getProblemDetailWithCause(ex), ex, request);
     }
 
     private ProblemDetailWithCause getProblemDetailWithCause(Throwable ex) {
-        if (ex instanceof UnauthorizedException exception)
-            return exception.getProblemDetailWithCause();
+        if (ex instanceof EmailAlreadyUsedException)
+            return new EmailAlreadyUsedException().getProblemDetailWithCause();
         if (ex instanceof BadRequestAlertException exception)
             return exception.getProblemDetailWithCause();
-        if (ex instanceof ResourceNotFoundException exception)
-            return (ProblemDetailWithCause) exception.getBody();
+        if (ex instanceof InvalidPasswordException exception)
+            return exception.getProblemDetailWithCause();
         if (ex instanceof ErrorResponseException exp && exp.getBody() instanceof ProblemDetailWithCause)
             return (ProblemDetailWithCause) exp.getBody();
-        return ProblemDetailWithCause.ProblemDetailWithCauseBuilder.instance()
-                .withStatus(toStatus(ex).value())
-                .build();
+        return ProblemDetailWithCause.ProblemDetailWithCauseBuilder.instance().withStatus(toStatus(ex).value()).build();
     }
 
     protected ProblemDetailWithCause customizeProblem(ProblemDetailWithCause problem, Throwable err, NativeWebRequest request) {
         if (problem.getStatus() <= 0) problem.setStatus(toStatus(err));
 
-        if (problem.getType().equals(URI.create("about:blank")))
+        if (problem.getType() == null || problem.getType().equals(URI.create("about:blank")))
             problem.setType(getMappedType(err));
 
         // higher precedence to Custom/ResponseStatus types
-        if (problem.getTitle() == null) {
-            String title = extractTitle(err, problem.getStatus());
-            if (!problem.getTitle().equals(title))
-                problem.setTitle(title);
+        String title = extractTitle(err, problem.getStatus());
+        if (problem.getTitle() == null || !problem.getTitle().equals(title)) {
+            problem.setTitle(title);
         }
 
         if (problem.getDetail() == null) {
@@ -111,7 +98,9 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
         if ((err instanceof MethodArgumentNotValidException) &&
                 (problem.getProperties() == null || !problem.getProperties().containsKey(FIELD_ERRORS_KEY)))
             problem.setProperty(FIELD_ERRORS_KEY, getFieldErrors((MethodArgumentNotValidException) err));
+
         problem.setCause(buildCause(err.getCause(), request).orElse(null));
+
         return problem;
     }
 
@@ -186,7 +175,6 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     }
 
     private HttpHeaders buildHeaders(Throwable err, NativeWebRequest request) {
-        String applicationName = "user-service";
         return err instanceof BadRequestAlertException ?
                 HeaderUtil.createFailureAlert(applicationName, true, ((BadRequestAlertException) err).getBody().getDetail(),
                         ((BadRequestAlertException) err).getBody().getTitle(), ((BadRequestAlertException) err).getMessage()) : null;
@@ -196,7 +184,7 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
         if (throwable != null && isCasualChainEnabled()) {
             return Optional.of(customizeProblem(getProblemDetailWithCause(throwable), throwable, request));
         }
-        return Optional.empty();
+        return Optional.ofNullable(null);
     }
 
     private boolean isCasualChainEnabled() {

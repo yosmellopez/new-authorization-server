@@ -40,9 +40,6 @@ public class JpaOAuth2ClientAuthorizationService implements OAuth2AuthorizedClie
         Optional<OAuthRegisteredClient> optional = clientRepository.findByClientIdOrId(client.getRegisteredClientId(), client.getRegisteredClientId());
         OAuthRegisteredClient registeredClient = optional.orElseThrow();
         OAuth2AccessToken.TokenType tokenType = OAuth2AccessToken.TokenType.BEARER;
-        if (OAuth2AccessToken.TokenType.BEARER.getValue().equalsIgnoreCase(client.getAccessTokenType())) {
-            tokenType = OAuth2AccessToken.TokenType.BEARER;
-        }
 
         ClientRegistration registration = ClientRegistration.withRegistrationId(client.getId())
                 .clientId(registeredClient.getClientId())
@@ -52,11 +49,11 @@ public class JpaOAuth2ClientAuthorizationService implements OAuth2AuthorizedClie
                 .authorizationGrantType(new AuthorizationGrantType(registeredClient.getAuthorizationGrantTypes()))
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_POST)
                 .scope(registeredClient.getScopes())
-                .authorizationUri("http://localhost:9999/v1/oauth2/authorize")
-                .issuerUri("http://localhost:9999")
-                .tokenUri("http://localhost:9999/v1/oauth2/token")
-                .userInfoUri("http://localhost:9999/v1/oauth2/userinfo")
-                .jwkSetUri("http://localhost:9999/v1/oauth2/jwks")
+                .authorizationUri("http://localhost:8081/v1/oauth2/authorize")
+                .issuerUri("http://localhost:8081")
+                .tokenUri("http://localhost:8081/v1/oauth2/token")
+                .userInfoUri("http://localhost:8081/v1/oauth2/userinfo")
+                .jwkSetUri("http://localhost:8081/v1/oauth2/jwks")
                 .build();
         OAuth2AccessToken oAuth2AccessToken = new OAuth2AccessToken(tokenType, client.getAccessTokenValue(), client.getAccessTokenIssuedAt(), client.getAccessTokenExpiresAt());
         OAuth2RefreshToken refreshToken = new OAuth2RefreshToken(client.getRefreshTokenValue(), client.getRefreshTokenIssuedAt(), client.getRefreshTokenExpiresAt());
