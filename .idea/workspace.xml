@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c0a2bcb-c949-4802-af41-497371c84e0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/domain/AppUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/domain/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/repository/AuthorityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/DomainUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/RegisterClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/util/HeaderUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/LoginResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/BadRequestAlertException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/EmailAlreadyUsedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/ErrorConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/ExceptionTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/FieldErrorVM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/InvalidPasswordException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/ProblemDetailWithCause.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/errors/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/vm/KeyAndPasswordVM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/web/rest/vm/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/UserJWTController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/AuthorizationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/AuthorizationServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/RestTemplateConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/RestTemplateConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaOAuth2ClientAuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/org/ylplabs/authorizationserver/security/JpaOAuth2ClientAuthorizationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/config/liquibase/master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/client/LoginFlowServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/service/client/LoginFlowServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ExceptionTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/org/ylplabs/usersservice/web/rest/errors/ExceptionTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/config/liquibase/master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +118,7 @@
       <updated>1676434929158</updated>
       <workItem from="1676434930265" duration="1198000" />
       <workItem from="1676471365541" duration="6507000" />
-      <workItem from="1676480031446" duration="11647000" />
+      <workItem from="1676480031446" duration="12926000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676479952187</created>
@@ -173,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676480460719</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1676576793316</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676576793316</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
