@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c0a2bcb-c949-4802-af41-497371c84e0f" name="Changes" comment="">
+    <list default="true" id="8c0a2bcb-c949-4802-af41-497371c84e0f" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/nest-cli.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/src/app.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/src/app.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/src/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/src/app.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/test/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/test/jest-e2e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/tsconfig.build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conversion-service/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,14 +70,19 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Programacion/EspacioTrabajo/new-spring-authorization-server/authorization-server/src/main/java/org/ylplabs/authorizationserver",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "D:/Programacion/EspacioTrabajo/new-spring-authorization-server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "82d9ac5b0cd366fe351b26304c1084ca",
+    "ts.external.directory.path": "D:\\Programacion\\EspacioTrabajo\\new-spring-authorization-server\\conversion-service\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -119,6 +144,8 @@
       <workItem from="1676434930265" duration="1198000" />
       <workItem from="1676471365541" duration="6507000" />
       <workItem from="1676480031446" duration="12926000" />
+      <workItem from="1677249610593" duration="872000" />
+      <workItem from="1678743155062" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676479952187</created>
@@ -148,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676576793316</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1677249697034</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677249697034</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +194,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/authorization-server" />
       <path value="$PROJECT_DIR$/users-service" />
+      <path value="$PROJECT_DIR$/conversion-service" />
     </ignored-roots>
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
